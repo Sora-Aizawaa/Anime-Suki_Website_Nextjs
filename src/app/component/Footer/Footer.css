@@ -1,0 +1,95 @@
+.footer {
+  background-color: #fff;
+  color: #333;
+
+  margin-top: 4rem;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  user-select: none;
+  margin: 0;
+}
+
+.footer-subtitle {
+  color: #666;
+  margin-top: 4px;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.footer-heartbeat {
+  margin-top: 1rem;
+}
+
+.footer-heart-title {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.footer-heart-status {
+  color: #666;
+}
+
+.healthy {
+  color: green;
+  font-weight: bold;
+}
+
+.footer-col {
+  max-width: 300px;
+  margin-left: 60px;
+}
+
+.footer-col h3 {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  margin-left: 200px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 200px;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.footer-bottom {
+  text-align: right;
+  padding: 1rem 0 2rem;
+  font-size: 12px;
+  color: #777;
+  margin-right: 20px;
+}
+
+.footer-bottom a {
+  text-decoration: underline;
+}

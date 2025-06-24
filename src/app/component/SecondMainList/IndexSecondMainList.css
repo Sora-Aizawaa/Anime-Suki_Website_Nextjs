@@ -1,0 +1,135 @@
+.trending-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #000000;
+  background-color: #ffffff;
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+.trending-title {
+  position: relative;
+
+  padding-left: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.trending-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.trending-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.anime-card {
+  position: relative;
+  min-width: 170px;
+
+  background-color: #f5f5f5;
+}
+
+.anime-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.anime-title {
+  position: absolute;
+  bottom: 22px;
+  left: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  white-space: nowrap;
+  color: #000000;
+  background-color: white;
+}
+
+.anime-rank {
+  position: absolute;
+  bottom: 30px;
+  right: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Container untuk tombol kanan */
+.scroll-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 30%;
+  right: -90px; /* Jarak ke kanan */
+}
+
+/* Tombol navigasi */
+.scroll-btn {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-btn-prev {
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.scroll-btn-prev:hover {
+  background-color: #f47777;
+}
+
+.scroll-btn-next {
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.scroll-btn-next:hover {
+  background-color: #8bf48b;
+}
+
+.Likes {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-bottom: -10px;
+}
