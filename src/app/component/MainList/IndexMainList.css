@@ -170,6 +170,18 @@
   align-items: center;
   background-color: #ffffff;
   position: relative;
+
+  max-width: 100vw; /* batasi lebar maksimum */
+  overflow: hidden; /* cegah elemen keluar dari kontainer */
+  padding: 1rem; /* beri ruang agar tidak nempel atas */
+  box-sizing: border-box;
+}
+
+.image-section img {
+  max-width: 100%; /* pastikan gambar tidak melebar */
+  height: auto; /* pertahankan aspek rasio */
+  object-fit: contain; /* pastikan gambar tidak terpotong */
+  display: block;
 }
 
 .image-wrapper {
