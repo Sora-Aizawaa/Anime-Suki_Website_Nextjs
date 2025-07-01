@@ -36,6 +36,11 @@ const Index = ({ recommendAnime, isLoading, activeLang }) => {
     return true;
   });
 
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + "...";
+  }
+
   return (
     <div className="anime-wrapper">
       <div className="anime-header">
@@ -68,7 +73,7 @@ const Index = ({ recommendAnime, isLoading, activeLang }) => {
                   className="rounded mb-2"
                 />
                 <div className="flex justify-end mb-2">
-                  <span className="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full font-semibold">
+                  <span className="bg-yellow-100 text-yellow-700 text-xs !px-2 !py-1 rounded-full font-semibold !mt-1">
                     🏆 Rank #{index + 1}
                   </span>
                 </div>
@@ -91,48 +96,48 @@ const Index = ({ recommendAnime, isLoading, activeLang }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 ">
               {/* Kolom Kiri */}
               <div className="space-y-3 ">
-                <p className="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-purple-100 text-purple-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🎬 Producers: {selectedAnime.producers || "-"}
                 </p>
-                <p className="inline-block bg-pink-100 text-pink-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-pink-100 text-pink-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🈲 Japanese Title: {selectedAnime.title_japanese || "-"}
                 </p>
-                <p className="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-blue-100 text-blue-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   👥 Members:{" "}
                   {selectedAnime.members?.toLocaleString("en-US") || "-"}
                 </p>
-                <p className="inline-block bg-yellow-100 text-yellow-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-yellow-100 text-yellow-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   ⭐ Score: {selectedAnime.score || "-"}
                 </p>
-                <p className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-green-100 text-green-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   📅 Aired: {formatDateTimeWIB(selectedAnime.date)}
                 </p>
-                <p className="inline-block bg-indigo-100 text-indigo-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-indigo-100 text-indigo-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🏢 Studios: {selectedAnime.studios}
                 </p>
-                <p className="inline-block bg-pink-100 text-pink-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-pink-100 text-pink-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   ⏱️ Duration: {selectedAnime.duration}
                 </p>
               </div>
 
               {/* Kolom Kanan */}
               <div className="space-y-3">
-                <p className="inline-block bg-red-100 text-red-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-red-100 text-red-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   📺 Status: {selectedAnime.status || "-"}
                 </p>
-                <p className="inline-block bg-indigo-100 text-indigo-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-indigo-100 text-indigo-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🔞 Rating: {selectedAnime.rating || "-"}
                 </p>
-                <p className="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-purple-100 text-purple-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🏷️ Themes: {selectedAnime.themes || "-"}
                 </p>
-                <p className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-gray-100 text-gray-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🎭 Genres: {selectedAnime.genres || "-"}
                 </p>
-                <p className="inline-block bg-orange-100 text-orange-800 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-orange-100 text-orange-800 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🎬 Episodes: {selectedAnime.episodes || "-"} Eps
                 </p>
-                <p className="inline-block bg-teal-100 text-teal-800 text-sm px-3 py-1 rounded-full font-semibold">
+                <p className="inline-block bg-teal-100 text-teal-800 text-sm !px-3 !py-1 rounded-md font-semibold !mt-2">
                   🛡️ Licensors: {selectedAnime.licensors || "-"}
                 </p>
               </div>
@@ -140,7 +145,9 @@ const Index = ({ recommendAnime, isLoading, activeLang }) => {
 
             {/* Sinopsis (opsional, dipotong 200 kata jika perlu) */}
             <p className="anime-synopsis mb-4">
-              {selectedAnime.synopsis || "No synopsis available."}
+              {selectedAnime.synopsis
+                ? truncateText(selectedAnime.synopsis, 350)
+                : "No synopsis available."}
             </p>
 
             {/* Tombol Trailer */}

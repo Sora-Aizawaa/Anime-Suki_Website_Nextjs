@@ -1,62 +1,97 @@
+/* Signup Container */
 .login-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  font-family: sans-serif;
 }
 
+/* Box container */
+.login-box {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Title */
 .login-title {
+  font-size: 28px;
   font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
-.login-text {
-  font-size: 20px;
+/* Form wrapper */
+.login-form {
+  flex: 1;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+/* Label */
+.login-form label {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Input */
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Form group (field + label) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+/* Forgot password or option text */
+.login-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Button */
+.login-button-1 {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Bottom text for signup or login prompt */
+.login-text2 {
+  font-size: 15px;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 10px;
-}
-
-.login-form input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.login-form button {
-  padding: 10px;
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login-form button:hover {
-  background-color: #2563eb;
-}
-
-.login-text1 {
-  font-size: 20px;
-  margin-top: 15px;
-}
-
-.signup-link-blue {
-  color: #3b82f6; /* warna biru */
+/* Signup link */
+.signup-link1 {
   text-decoration: underline;
-  font-weight: 500;
+  color: blue;
   cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.signup-link-blue:hover {
-  color: #0051ff; /* biru lebih gelap saat hover */
 }

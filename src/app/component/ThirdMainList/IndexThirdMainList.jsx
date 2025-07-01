@@ -51,7 +51,7 @@ const IndexThirdMainList = ({ animeUpcoming, activeLang }) => {
             <span className="badge">{item.year || "-"}</span>
             <img src={item.images} alt={item.title} />
             <div className="flex justify-end mt-2 mb-2">
-              <span className="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full font-semibold">
+              <span className="bg-yellow-100 text-yellow-700 text-xs !px-2 !py-1 rounded-full font-semibold !mt-1">
                 🏆 Rank #{index + 1}
               </span>
             </div>
@@ -73,48 +73,48 @@ const IndexThirdMainList = ({ animeUpcoming, activeLang }) => {
             <h3 className="anime-title8">{selectedAnime.title}</h3>
             <br />
             <p className="anime-info">
-              <span className="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-purple-100 text-purple-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 🎬 Producers: {selectedAnime.producers || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-pink-100 text-pink-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-pink-100 text-pink-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 🈲 Japanese Title: {selectedAnime.title_japan || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-blue-100 text-blue-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 👥 Members:{" "}
                 {selectedAnime.members?.toLocaleString("en-US") || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-yellow-100 text-yellow-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-yellow-100 text-yellow-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 ⭐ Popularity: {selectedAnime.popularity || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-green-100 text-green-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 📺 Status: {selectedAnime.status || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-red-100 text-red-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-red-100 text-red-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 🔞 Rating: {selectedAnime.rating || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-indigo-100 text-indigo-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-indigo-100 text-indigo-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 🏷️ Themes: {selectedAnime.themes || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-purple-100 text-purple-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-purple-100 text-purple-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 🎭 Genres: {selectedAnime.genres || "-"}
               </span>
             </p>
             <p className="anime-info">
-              <span className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full font-semibold">
+              <span className="inline-block bg-gray-100 text-gray-700 text-sm !px-3 !py-1 rounded-md font-semibold !mt-0.2">
                 📅 Aired: {getMonthName(selectedAnime.aired_month)}{" "}
                 {selectedAnime.aired_day}, {selectedAnime.aired_year}
               </span>

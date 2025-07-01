@@ -182,7 +182,7 @@ export default function Home() {
           }
 
           // Tambahkan delay setelah setiap permintaan API detail
-          await jeda(100);
+          await jeda(50);
         }
 
         formattedDataRecommended.push({

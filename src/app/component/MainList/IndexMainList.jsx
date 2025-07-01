@@ -78,16 +78,17 @@ const IndexMainList = ({ dataList, activeLang }) => {
                 {monthName} {day}, {year}
               </span>
               {/* <span className="badge">HD</span> */}
-              <span className="px-2 py-1 rounded-md text-sm font-semibold bg-yellow-100 text-yellow-700">
+              <span className="!px-2 !py-1 rounded-md text-base font-semibold bg-yellow-100 text-yellow-700">
                 {score} ⭐
               </span>
-              <span className="px-2 py-1 rounded-md text-sm font-semibold bg-red-100 text-red-700">
+
+              <span className="!px-2 !py-1 rounded-md text-base font-semibold bg-red-100 text-red-700">
                 {episodes} Eps
               </span>
-              <span className="px-2 py-1 rounded-md text-sm font-semibold bg-blue-200 text-blue-700">
+              <span className="!px-2 !py-1 rounded-md text-base font-semibold bg-blue-200 text-blue-700">
                 {rating}
               </span>
-              <span className="px-2 py-1 rounded-md text-sm font-semibold bg-green-100 text-green-700">
+              <span className="!px-2 !py-1 rounded-md text-base font-semibold bg-green-100 text-green-700">
                 {status}
               </span>
             </div>
